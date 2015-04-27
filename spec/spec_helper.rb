@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'spork'
-
+require 'factory_girl_rails'
 Spork.prefork do
   ENV["RAILS_ENV"] ||= 'test'
   require File.expand_path("../../config/environment", __FILE__)

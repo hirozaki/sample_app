@@ -2,7 +2,8 @@ require File.expand_path('../boot', __FILE__)
 
 # Pick the frameworks you want:
 require "active_model/railtie"
-require "active_job/railtie"
+# I deleted this, which solved the problem I had sufferd from. 
+# require "active_job/railtie"
 require "active_record/railtie"
 require "action_controller/railtie"
 require "action_mailer/railtie"
@@ -29,7 +30,7 @@ module SampleApp
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
+    # I deleted this method on April 16th, 2015. config.active_record.raise_in_transactional_callbacks = true
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end
